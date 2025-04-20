@@ -1,0 +1,124 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('mathbg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Container */
+.chat {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 420px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  padding: 20px;
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.user-message {
+  background-color: rgba(0, 123, 255, 0.2);
+  text-align: right;
+}
+
+/* Input Area */
+.user-input {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-input input {
+  flex: 1;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.user-input button {
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 500px) {
+  .chat {
+    height: 95vh;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-header {
+    font-size: 1.2rem;
+  }
+}
